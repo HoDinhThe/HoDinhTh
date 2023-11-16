@@ -5,11 +5,11 @@ import Model.SanPham;
 import Service.PGiaoHangService;
 import Service.SanPhamService;
 import java.util.ArrayList;
-import javax.swing.RowFilter;
+
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
+
 
 public class QLGiaoHang extends javax.swing.JFrame {
     ArrayList<PGiaoHang>list=new ArrayList<>();
@@ -397,17 +397,18 @@ public class QLGiaoHang extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(350, 350, 350)
+                        .addComponent(jLabel13)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel13)
-                .addGap(352, 352, 352))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -458,9 +459,7 @@ public class QLGiaoHang extends javax.swing.JFrame {
 
     private void btnInHĐActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInHĐActionPerformed
         // TODO add your handling code here:
-        GiaoHang gh = new GiaoHang();
-        gh.show();
-        dispose();
+ 
     }//GEN-LAST:event_btnInHĐActionPerformed
 
     private void btnHthanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHthanhActionPerformed
@@ -468,24 +467,15 @@ public class QLGiaoHang extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHthanhActionPerformed
 
     private void btnserchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnserchActionPerformed
-        // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_btnserchActionPerformed
 
     private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel ob = (DefaultTableModel) tblBang.getModel();
-        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>();
-        tblBang.setRowSorter(obj);
-        obj.setRowFilter(RowFilter.regexFilter(txtSearch.getText()));
+
     }//GEN-LAST:event_txtSearchActionPerformed
 
     private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
-        // TODO add your handling code here:
-        DefaultTableModel ob = (DefaultTableModel) tblBang.getModel();
-        TableRowSorter<DefaultTableModel> obj = new TableRowSorter<>();
-        tblBang.setRowSorter(obj);
-        obj.setRowFilter(RowFilter.regexFilter(txtSearch.getText()));
+
     }//GEN-LAST:event_txtSearchKeyReleased
 
     /**
